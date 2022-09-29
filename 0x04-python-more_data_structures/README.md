@@ -1,0 +1,1 @@
+data structures: DICTIONARY, SET, LAMBDA FUNCTIONS: MAP(), FILTER(), REDUCE()
