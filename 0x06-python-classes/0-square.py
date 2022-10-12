@@ -1,8 +1,7 @@
 #!/usr/bin/python3
-
-'''Empty class Square'''
+''' Define a class Square '''
 
 
 class Square:
-    '''The square attribute goes here'''
+    ''' Represent a square '''
     pass
