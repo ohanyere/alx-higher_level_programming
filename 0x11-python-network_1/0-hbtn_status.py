@@ -1,13 +1,17 @@
 #!/usr/bin/python3
+"""fetch url with urlib"""
+from urllib.request import urlopen
 
-'''Python script that fetches https://alx-intranet.hbtn.io/status'''
-import urllib.request
+
+def status():
+    """fetch url body"""
+    with urlopen('https://alx-intranet.hbtn.io/status') as response:
+        body = response.read()
+        convert = body.decode('utf-8')
+        print('Body response:\n\t- type: {}'.format(type(body)))
+        print('\t- content: {}\n\t- utf8 content: {}'.
+              format(body, convert, end=''))
 
 
-if __name__ == "__main__":
-    with urllib.request.urlopen('https://alx-intranet.hbtn.io/status') as req:
-        content = req.read()
-        print("Body response:")
-        print("\t- type: {}".format(type(content)))
-        print("\t- content: {}".format(content))
-        print("\t- utf8 content: {}".format(content.decode("utf-8")))
+if __name__ == '__main__':
+    status()
